@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+
+members = ["aoc*"]
+default-members = ["aoc*"]
+
+[workspace.dependencies]
+# proconio = { version = "0.4.5", features = ["derive"] }

@@ -1,1 +1,9 @@
-/target
+# rust
+target
+Cargo.lock
+
+# cpp
+a.out
+
+# js
+package-lock.json
