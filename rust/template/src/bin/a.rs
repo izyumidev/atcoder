@@ -1,6 +1,8 @@
-use {{crate_name}}::a::process;
+use proconio::*;
 
 fn main() {
-	let file = include_str!("../../a.txt");
-	process(file);
+    input! {
+        n: usize
+    }
+    println!("{}", n);
 }

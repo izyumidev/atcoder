@@ -1,9 +1,9 @@
 # inspired by https://github.com/ChristopherBiscardi/advent-of-code/blob/main/2023/rust/justfile
 
-# use `just create aoc123` to create a new contest directory
+# use `just create abc123` to create a new contest directory
 create contest:
 	cargo generate --path ./template/ --name {{contest}}
 
-# use `just test contest part` to test a part of a contest
+# use `just test abc123 a` to test the A part of contest abc123
 test contest part:
-	cargo nextest run -p {{contest}} {{part}}
+	cat {{contest}}/{{part}}.txt | cargo run -p {{contest}} --bin {{part}}
