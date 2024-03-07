@@ -7,3 +7,12 @@ create contest:
 # use `just test abc123 a` to test the A part of contest abc123
 test contest part:
 	cat {{contest}}/{{part}}.txt | cargo run -p {{contest}} --bin {{part}}
+
+# use `just lccreate xyz` to create a new leetcode contest directory
+lccreate contest:
+	cargo generate --path ./lctemplate/ --name leetcode-{{contest}}
+
+# use `just lctest xyz` to test the solution for xyz
+lctest contest:
+	cargo run -p leetcode-{{contest}}
+
