@@ -1,18 +1,22 @@
 # inspired by https://github.com/ChristopherBiscardi/advent-of-code/blob/main/2023/rust/justfile
 
 # use `just create abc123` to create a new contest directory
-create contest:
+atcc contest:
 	cargo generate --path ./template/ --name {{contest}}
 
 # use `just test abc123 a` to test the A part of contest abc123
-test contest part:
+att contest part:
 	cat {{contest}}/{{part}}.txt | cargo run -p {{contest}} --bin {{part}}
 
 # use `just lccreate xyz` to create a new leetcode contest directory
-lccreate contest:
+lcc contest:
 	cargo generate --path ./lctemplate/ --name leetcode-{{contest}}
 
+# use `just lctree xyz` to create a new leetcode contest directory
+lctree contest:
+	cargo generate --path ./lctree/ --name leetcode-{{contest}}
+
 # use `just lctest xyz` to test the solution for xyz
-lctest contest:
+lct contest:
 	cargo run -p leetcode-{{contest}}
 
