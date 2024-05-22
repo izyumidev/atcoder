@@ -1,5 +1,5 @@
 [workspace]
-members = ["abc*", "leetcode-*"]
+members = ["abc*", "leetcode-*", "*"]
 
 [workspace.dependencies]
 proconio = { version = "0.4.5", features = ["derive"] }
